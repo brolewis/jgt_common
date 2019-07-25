@@ -1,0 +1,1983 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>jgt_common package &mdash; JGT Common Tools - A library of shared helpers 1.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Maintainer’s Documentation" href="MAINTAINER.html" />
+    <link rel="prev" title="JGT Common Tools" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> JGT Common Tools - A library of shared helpers
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Library</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">jgt_common package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-jgt_common.assert_">jgt_common.assert_ module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-jgt_common.http_helpers">jgt_common.http_helpers module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-jgt_common.tag_to_url">jgt_common.tag_to_url module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-jgt_common.uuid_replacer">jgt_common.uuid_replacer module</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Maintainers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="MAINTAINER.html">Maintainer’s Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MAINTAINER.html#top-level-scripts">Top-level scripts:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MAINTAINER.html#bin-scripts"><code class="docutils literal notranslate"><span class="pre">bin/</span></code> scripts:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTORS.html">Contributors</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">JGT Common Tools - A library of shared helpers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>jgt_common package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/jgt_common.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-jgt_common">
+<span id="jgt-common-package"></span><h1>jgt_common package<a class="headerlink" href="#module-jgt_common" title="Permalink to this headline">¶</a></h1>
+<p>General helper functions.</p>
+<div class="graphviz"><img src="_images/inheritance-b5433ed0469defe4f3c9f29321d79f2a5fa024ef.png" alt="Inheritance diagram of jgt_common" usemap="#inheritanceebd2bbfcd3" class="inheritance graphviz" /></div>
+<map id="inheritanceebd2bbfcd3" name="inheritanceebd2bbfcd3">
+<area shape="rect" id="node1" href="#jgt_common.CommonAttributeList" target="_top" title="A list for similar objects that can be operated on as a group." alt="" coords="37,104,195,129"/>
+<area shape="rect" id="node5" href="#jgt_common.ResponseList" target="_top" title="A list specialized for testing, w/ResponseInfo object items." alt="" coords="275,129,380,155"/>
+<area shape="rect" id="node2" href="#jgt_common.IncompleteAtTimeoutException" target="_top" title="Exception for check_until results that timeout still pending validation." alt="" coords="5,55,227,80"/>
+<area shape="rect" id="node3" href="#jgt_common.NotEmptyList" target="_top" title="A list that fails to iterate if it is empty." alt="" coords="62,153,170,179"/>
+<area shape="rect" id="node4" href="#jgt_common.ResponseInfo" target="_top" title="Keep track of needed info about test operation responses (or any info really)." alt="" coords="63,5,169,31"/>
+</map><hr class="docutils" />
+<p>The functions and classes in this module fall into several
+general categories:</p>
+<table class="colwidths-auto docutils align-default" id="id1">
+<caption><span class="caption-text">Classes Defined in this Module</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.CommonAttributeList" title="jgt_common.CommonAttributeList"><code class="xref py py-func docutils literal notranslate"><span class="pre">CommonAttributeList()</span></code></a></p></td>
+<td><p>A list for similar objects that can be operated on as a group.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.IncompleteAtTimeoutException" title="jgt_common.IncompleteAtTimeoutException"><code class="xref py py-func docutils literal notranslate"><span class="pre">IncompleteAtTimeoutException()</span></code></a></p></td>
+<td><p>Exception for check_until results that timeout still pending validation.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.NotEmptyList" title="jgt_common.NotEmptyList"><code class="xref py py-func docutils literal notranslate"><span class="pre">NotEmptyList()</span></code></a></p></td>
+<td><p>A list that fails to iterate if it is empty.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.ResponseInfo" title="jgt_common.ResponseInfo"><code class="xref py py-func docutils literal notranslate"><span class="pre">ResponseInfo()</span></code></a></p></td>
+<td><p>Keep track of needed info about test operation responses (or any info really).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.ResponseList" title="jgt_common.ResponseList"><code class="xref py py-func docutils literal notranslate"><span class="pre">ResponseList()</span></code></a></p></td>
+<td><p>A list specialized for testing, w/ResponseInfo object items.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id2">
+<caption><span class="caption-text">Dictionary related functions</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.dict_from" title="jgt_common.dict_from"><code class="xref py py-func docutils literal notranslate"><span class="pre">dict_from()</span></code></a></p></td>
+<td><p>Build a new dict based on turning values from an iterable into key/value pairs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.dict_strip_value" title="jgt_common.dict_strip_value"><code class="xref py py-func docutils literal notranslate"><span class="pre">dict_strip_value()</span></code></a></p></td>
+<td><p>Return a new dict based on stripping out any key with the given value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.dict_transform" title="jgt_common.dict_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">dict_transform()</span></code></a></p></td>
+<td><p>Return a new dict based on transforming the keys and/or values of <code class="docutils literal notranslate"><span class="pre">a_dict</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.filter_dict" title="jgt_common.filter_dict"><code class="xref py py-func docutils literal notranslate"><span class="pre">filter_dict()</span></code></a></p></td>
+<td><p>Filter a dictionary based on truthiness.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.must_get_key" title="jgt_common.must_get_key"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_get_key()</span></code></a></p></td>
+<td><p>Either return the value for the key, or raise an exception.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.must_get_keys" title="jgt_common.must_get_keys"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_get_keys()</span></code></a></p></td>
+<td><p>Either return the value found for the keys provided, or raise an exception.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id3">
+<caption><span class="caption-text">Documentation support</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.build_classification_rst_string" title="jgt_common.build_classification_rst_string"><code class="xref py py-func docutils literal notranslate"><span class="pre">build_classification_rst_string()</span></code></a></p></td>
+<td><p>Create rST for all the items in from_dict that are part of for_module.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.classify" title="jgt_common.classify"><code class="xref py py-func docutils literal notranslate"><span class="pre">classify()</span></code></a></p></td>
+<td><p>Add glossary subject category classification meta-data to it’s target.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.first_line_of_doc_string" title="jgt_common.first_line_of_doc_string"><code class="xref py py-func docutils literal notranslate"><span class="pre">first_line_of_doc_string()</span></code></a></p></td>
+<td><p>Get the first non-empty line of the doc string for thing, if there is one.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id4">
+<caption><span class="caption-text">Environment related functions</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.must_be_in_virtual_environment" title="jgt_common.must_be_in_virtual_environment"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_be_in_virtual_environment()</span></code></a></p></td>
+<td><p>Ensure the current process is running in a virtual environment.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.var_from_env" title="jgt_common.var_from_env"><code class="xref py py-func docutils literal notranslate"><span class="pre">var_from_env()</span></code></a></p></td>
+<td><p>Try to get a value from an environment variable.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id5">
+<caption><span class="caption-text">Exceptions and exception handling</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.IncompleteAtTimeoutException" title="jgt_common.IncompleteAtTimeoutException"><code class="xref py py-func docutils literal notranslate"><span class="pre">IncompleteAtTimeoutException()</span></code></a></p></td>
+<td><p>Exception for check_until results that timeout still pending validation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.retry_on_exceptions" title="jgt_common.retry_on_exceptions"><code class="xref py py-func docutils literal notranslate"><span class="pre">retry_on_exceptions()</span></code></a></p></td>
+<td><p>Retry a function based on provided parameters.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id6">
+<caption><span class="caption-text">Exitting the process</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.cleanup_and_exit" title="jgt_common.cleanup_and_exit"><code class="xref py py-func docutils literal notranslate"><span class="pre">cleanup_and_exit()</span></code></a></p></td>
+<td><p>Cleanup a directory tree that was created and exit.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.error_if" title="jgt_common.error_if"><code class="xref py py-func docutils literal notranslate"><span class="pre">error_if()</span></code></a></p></td>
+<td><p>Exit the program if a provided check is true.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.exit" title="jgt_common.exit"><code class="xref py py-func docutils literal notranslate"><span class="pre">exit()</span></code></a></p></td>
+<td><p>Exit the program and optionally print a message to standard error.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.must_be_in_virtual_environment" title="jgt_common.must_be_in_virtual_environment"><code class="xref py py-func docutils literal notranslate"><span class="pre">must_be_in_virtual_environment()</span></code></a></p></td>
+<td><p>Ensure the current process is running in a virtual environment.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.safe_run" title="jgt_common.safe_run"><code class="xref py py-func docutils literal notranslate"><span class="pre">safe_run()</span></code></a></p></td>
+<td><p>Run the given list of commands, only return if no error.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id7">
+<caption><span class="caption-text">File and file contents related functions</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.display_name" title="jgt_common.display_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">display_name()</span></code></a></p></td>
+<td><p>Create a human-readable name for a given project.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.filter_lines" title="jgt_common.filter_lines"><code class="xref py py-func docutils literal notranslate"><span class="pre">filter_lines()</span></code></a></p></td>
+<td><p>Filter the given lines based on the given filter function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.get_file_contents" title="jgt_common.get_file_contents"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_file_contents()</span></code></a></p></td>
+<td><p>Get the contents of a file as a Python string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.get_file_docstring" title="jgt_common.get_file_docstring"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_file_docstring()</span></code></a></p></td>
+<td><p>Get the full docstring of a given python file.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id8">
+<caption><span class="caption-text">Filtering and Transforming functions</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.dict_from" title="jgt_common.dict_from"><code class="xref py py-func docutils literal notranslate"><span class="pre">dict_from()</span></code></a></p></td>
+<td><p>Build a new dict based on turning values from an iterable into key/value pairs.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.dict_strip_value" title="jgt_common.dict_strip_value"><code class="xref py py-func docutils literal notranslate"><span class="pre">dict_strip_value()</span></code></a></p></td>
+<td><p>Return a new dict based on stripping out any key with the given value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.dict_transform" title="jgt_common.dict_transform"><code class="xref py py-func docutils literal notranslate"><span class="pre">dict_transform()</span></code></a></p></td>
+<td><p>Return a new dict based on transforming the keys and/or values of <code class="docutils literal notranslate"><span class="pre">a_dict</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.filter_dict" title="jgt_common.filter_dict"><code class="xref py py-func docutils literal notranslate"><span class="pre">filter_dict()</span></code></a></p></td>
+<td><p>Filter a dictionary based on truthiness.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.filter_lines" title="jgt_common.filter_lines"><code class="xref py py-func docutils literal notranslate"><span class="pre">filter_lines()</span></code></a></p></td>
+<td><p>Filter the given lines based on the given filter function.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id9">
+<caption><span class="caption-text">Looping / Retry related items</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.IncompleteAtTimeoutException" title="jgt_common.IncompleteAtTimeoutException"><code class="xref py py-func docutils literal notranslate"><span class="pre">IncompleteAtTimeoutException()</span></code></a></p></td>
+<td><p>Exception for check_until results that timeout still pending validation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.check_until" title="jgt_common.check_until"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_until()</span></code></a></p></td>
+<td><p>Periodically call a function until its result validates or the timeout is exceeded.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.retry_on_exceptions" title="jgt_common.retry_on_exceptions"><code class="xref py py-func docutils literal notranslate"><span class="pre">retry_on_exceptions()</span></code></a></p></td>
+<td><p>Retry a function based on provided parameters.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id10">
+<caption><span class="caption-text">Meta-data related functions</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.classify" title="jgt_common.classify"><code class="xref py py-func docutils literal notranslate"><span class="pre">classify()</span></code></a></p></td>
+<td><p>Add glossary subject category classification meta-data to it’s target.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.display_name" title="jgt_common.display_name"><code class="xref py py-func docutils literal notranslate"><span class="pre">display_name()</span></code></a></p></td>
+<td><p>Create a human-readable name for a given project.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.get_file_docstring" title="jgt_common.get_file_docstring"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_file_docstring()</span></code></a></p></td>
+<td><p>Get the full docstring of a given python file.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id11">
+<caption><span class="caption-text">Miscellaneous functions</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.always_false" title="jgt_common.always_false"><code class="xref py py-func docutils literal notranslate"><span class="pre">always_false()</span></code></a></p></td>
+<td><p>Return False regardless of any provided arguments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.always_true" title="jgt_common.always_true"><code class="xref py py-func docutils literal notranslate"><span class="pre">always_true()</span></code></a></p></td>
+<td><p>Return True regardless of any provided arguments.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.default_if_none" title="jgt_common.default_if_none"><code class="xref py py-func docutils literal notranslate"><span class="pre">default_if_none()</span></code></a></p></td>
+<td><p>Return <code class="docutils literal notranslate"><span class="pre">default</span> <span class="pre">if</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">None</span> <span class="pre">else</span> <span class="pre">value</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.fib_or_max" title="jgt_common.fib_or_max"><code class="xref py py-func docutils literal notranslate"><span class="pre">fib_or_max()</span></code></a></p></td>
+<td><p>Get the nth Fibonacci number or max_number, which ever is smaller.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.format_if" title="jgt_common.format_if"><code class="xref py py-func docutils literal notranslate"><span class="pre">format_if()</span></code></a></p></td>
+<td><p>Return a message string with a formatted value if any content value is present.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.identity" title="jgt_common.identity"><code class="xref py py-func docutils literal notranslate"><span class="pre">identity()</span></code></a></p></td>
+<td><p>Build simple identity function based on provided parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.is_iterable" title="jgt_common.is_iterable"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_iterable()</span></code></a></p></td>
+<td><p>Return True if item is iterable, False otherwise, using an iter(item) test.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.no_op" title="jgt_common.no_op"><code class="xref py py-func docutils literal notranslate"><span class="pre">no_op()</span></code></a></p></td>
+<td><p>Reusable no-op function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.ticketing_system_for" title="jgt_common.ticketing_system_for"><code class="xref py py-func docutils literal notranslate"><span class="pre">ticketing_system_for()</span></code></a></p></td>
+<td><p>Return the Ticketing System/Type for the given ticket, or the empty string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.url_for_ticket" title="jgt_common.url_for_ticket"><code class="xref py py-func docutils literal notranslate"><span class="pre">url_for_ticket()</span></code></a></p></td>
+<td><p>Return a URL for the given ticketing_system, ticket pair.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.url_if_ticket" title="jgt_common.url_if_ticket"><code class="xref py py-func docutils literal notranslate"><span class="pre">url_if_ticket()</span></code></a></p></td>
+<td><p>Return a Ticket URL if a ticket is found.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id12">
+<caption><span class="caption-text">Random data related functions</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.generate_random_string" title="jgt_common.generate_random_string"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_random_string()</span></code></a></p></td>
+<td><p>Generate a random string of the specified size.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id13">
+<caption><span class="caption-text">Classes/functions for working with the <code class="docutils literal notranslate"><span class="pre">requests</span></code> library</span><a class="headerlink" href="#id13" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.ResponseInfo" title="jgt_common.ResponseInfo"><code class="xref py py-func docutils literal notranslate"><span class="pre">ResponseInfo()</span></code></a></p></td>
+<td><p>Keep track of needed info about test operation responses (or any info really).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.ResponseList" title="jgt_common.ResponseList"><code class="xref py py-func docutils literal notranslate"><span class="pre">ResponseList()</span></code></a></p></td>
+<td><p>A list specialized for testing, w/ResponseInfo object items.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id14">
+<caption><span class="caption-text">Subprocesses/Commands related functions</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.safe_run" title="jgt_common.safe_run"><code class="xref py py-func docutils literal notranslate"><span class="pre">safe_run()</span></code></a></p></td>
+<td><p>Run the given list of commands, only return if no error.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id15">
+<caption><span class="caption-text">Sequences/Lists helper classes and functions</span><a class="headerlink" href="#id15" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.CommonAttributeList" title="jgt_common.CommonAttributeList"><code class="xref py py-func docutils literal notranslate"><span class="pre">CommonAttributeList()</span></code></a></p></td>
+<td><p>A list for similar objects that can be operated on as a group.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.NotEmptyList" title="jgt_common.NotEmptyList"><code class="xref py py-func docutils literal notranslate"><span class="pre">NotEmptyList()</span></code></a></p></td>
+<td><p>A list that fails to iterate if it is empty.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.index_or_default" title="jgt_common.index_or_default"><code class="xref py py-func docutils literal notranslate"><span class="pre">index_or_default()</span></code></a></p></td>
+<td><p>Return the index of a value from a list, or a default if not found.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.is_iterable" title="jgt_common.is_iterable"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_iterable()</span></code></a></p></td>
+<td><p>Return True if item is iterable, False otherwise, using an iter(item) test.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.list_from" title="jgt_common.list_from"><code class="xref py py-func docutils literal notranslate"><span class="pre">list_from()</span></code></a></p></td>
+<td><p>Generate a list from a single item or an iterable.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.no_nones" title="jgt_common.no_nones"><code class="xref py py-func docutils literal notranslate"><span class="pre">no_nones()</span></code></a></p></td>
+<td><p>Return a list of the non-None values in iterable.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.only_item_of" title="jgt_common.only_item_of"><code class="xref py py-func docutils literal notranslate"><span class="pre">only_item_of()</span></code></a></p></td>
+<td><p>Assert item_sequence has only one item, and return that item.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.padded_list" title="jgt_common.padded_list"><code class="xref py py-func docutils literal notranslate"><span class="pre">padded_list()</span></code></a></p></td>
+<td><p>Generate a fixed-length list from an iterable, padding as needed.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.string_to_list" title="jgt_common.string_to_list"><code class="xref py py-func docutils literal notranslate"><span class="pre">string_to_list()</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.split()</span></code> a string into a list and <code class="docutils literal notranslate"><span class="pre">.strip()</span></code> each piece.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.truths_from" title="jgt_common.truths_from"><code class="xref py py-func docutils literal notranslate"><span class="pre">truths_from()</span></code></a></p></td>
+<td><p>Return a list of the truthy values in iterable.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id16">
+<caption><span class="caption-text">String related functions</span><a class="headerlink" href="#id16" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.format_if" title="jgt_common.format_if"><code class="xref py py-func docutils literal notranslate"><span class="pre">format_if()</span></code></a></p></td>
+<td><p>Return a message string with a formatted value if any content value is present.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.generate_random_string" title="jgt_common.generate_random_string"><code class="xref py py-func docutils literal notranslate"><span class="pre">generate_random_string()</span></code></a></p></td>
+<td><p>Generate a random string of the specified size.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.string_to_list" title="jgt_common.string_to_list"><code class="xref py py-func docutils literal notranslate"><span class="pre">string_to_list()</span></code></a></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.split()</span></code> a string into a list and <code class="docutils literal notranslate"><span class="pre">.strip()</span></code> each piece.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id17">
+<caption><span class="caption-text">Ticketing System related functions</span><a class="headerlink" href="#id17" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.ticketing_system_for" title="jgt_common.ticketing_system_for"><code class="xref py py-func docutils literal notranslate"><span class="pre">ticketing_system_for()</span></code></a></p></td>
+<td><p>Return the Ticketing System/Type for the given ticket, or the empty string.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.url_for_ticket" title="jgt_common.url_for_ticket"><code class="xref py py-func docutils literal notranslate"><span class="pre">url_for_ticket()</span></code></a></p></td>
+<td><p>Return a URL for the given ticketing_system, ticket pair.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.url_if_ticket" title="jgt_common.url_if_ticket"><code class="xref py py-func docutils literal notranslate"><span class="pre">url_if_ticket()</span></code></a></p></td>
+<td><p>Return a Ticket URL if a ticket is found.</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<dl class="class">
+<dt id="jgt_common.CommonAttributeList">
+<em class="property">class </em><code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">CommonAttributeList</code><a class="reference internal" href="_modules/jgt_common.html#CommonAttributeList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.CommonAttributeList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
+<p>A list for similar objects that can be operated on as a group.</p>
+<p>Accessing an attribute on this list instead
+returns a list of that attribute’s value from each member.
+(unless the attribute is defined here or in the base class)
+If any member of this list does not have that attribute, <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code> is
+raised.</p>
+<p>Setting an attribute on this list instead sets the attribute on each member.</p>
+<dl class="attribute">
+<dt id="jgt_common.CommonAttributeList.classify_data">
+<code class="sig-name descname">classify_data</code><em class="property"> = ('sequence', 'class')</em><a class="headerlink" href="#jgt_common.CommonAttributeList.classify_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="jgt_common.CommonAttributeList.update_all">
+<code class="sig-name descname">update_all</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#CommonAttributeList.update_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.CommonAttributeList.update_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update all attributes based on the provided kwargs.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="jgt_common.HEX_DIGIT_RE">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">HEX_DIGIT_RE</code><em class="property"> = '[\\da-fA-F]'</em><a class="headerlink" href="#jgt_common.HEX_DIGIT_RE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regular expression for matching a single hex digit.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="jgt_common.IncompleteAtTimeoutException">
+<em class="property">exception </em><code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">IncompleteAtTimeoutException</code><span class="sig-paren">(</span><em class="sig-param">msg</em>, <em class="sig-param">call_result=None</em>, <em class="sig-param">timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#IncompleteAtTimeoutException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.IncompleteAtTimeoutException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Exception for check_until results that timeout still pending validation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>msg</strong> (<em>str</em>) – Human readable string describing the exception.</p></li>
+<li><p><strong>call_result</strong> (<em>any</em>) – the final result of the call, which failed validation.</p></li>
+<li><p><strong>timeout</strong> (<em>int</em><em>,</em><em>float</em>) – the timeout at which the result was still failing.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Atributes:</dt><dd><p>call_result (any): the final result of the call, which failed validation.
+timeout (int,float): the timeout at which the result was still failing.</p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="jgt_common.IncompleteAtTimeoutException.classify_data">
+<code class="sig-name descname">classify_data</code><em class="property"> = ('looping', 'exceptions', 'class')</em><a class="headerlink" href="#jgt_common.IncompleteAtTimeoutException.classify_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="jgt_common.NotEmptyList">
+<em class="property">class </em><code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">NotEmptyList</code><a class="reference internal" href="_modules/jgt_common.html#NotEmptyList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.NotEmptyList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></p>
+<p>A list that fails to iterate if it is empty.</p>
+<p>Iterating on this list will fail if the list is empty.
+This simplifies code from having to check for empty lists everywhere.
+Empty lists are a problem because <code class="docutils literal notranslate"><span class="pre">for</span></code> loop bodies don’t execute on empyt lists.
+thus any checks/tests/etc in a loop body would not run.
+In a testing context, the loop would “succeed” by not doing anything
+(it would fail to have checked anything) and that would be a false-positive.</p>
+<dl class="attribute">
+<dt id="jgt_common.NotEmptyList.classify_data">
+<code class="sig-name descname">classify_data</code><em class="property"> = ('sequence', 'class')</em><a class="headerlink" href="#jgt_common.NotEmptyList.classify_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="jgt_common.NotEmptyList.error_on_empty">
+<em class="property">static </em><code class="sig-name descname">error_on_empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#NotEmptyList.error_on_empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.NotEmptyList.error_on_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is called to return the error message when the NotEmptyList is empty.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="jgt_common.OBSOLETE_TICKETING_SYSTEMS">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">OBSOLETE_TICKETING_SYSTEMS</code><em class="property"> = ['JIRA', 'SNOW', 'VersionOne']</em><a class="headerlink" href="#jgt_common.OBSOLETE_TICKETING_SYSTEMS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Systems for which we still support identifying Tickets, but no longer can access.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="jgt_common.ResponseInfo">
+<em class="property">class </em><code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">ResponseInfo</code><span class="sig-paren">(</span><em class="sig-param">response=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">response_callback=None</em>, <em class="sig-param">response_data_extract=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#ResponseInfo"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.ResponseInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Keep track of needed info about test operation responses (or any info really).</p>
+<p>Originally created to augment/track info about <code class="docutils literal notranslate"><span class="pre">requests'</span></code> responses, it’s not
+limited or bounded by that use case.
+Please read <code class="docutils literal notranslate"><span class="pre">response</span></code> more generally as any kind of object useful for catpuring
+some kind of response from the system under test.
+In addition, arbitrary other attributes can be set on this object.
+To make that easier, <code class="docutils literal notranslate"><span class="pre">kwargs</span></code> is processed as attribute / value pairs to be set on
+the object, for whatever attributes make sense for your application.</p>
+<p>Sometimes this object is keeping track of a response that is needed,
+but isn’t available yet.
+In these cases, <code class="docutils literal notranslate"><span class="pre">response_callback</span></code> can be set to a parameter-less function that
+can be called to obtain the response when the <code class="docutils literal notranslate"><span class="pre">response_data</span></code> property is used.</p>
+<p>For ease of use, when the data is buried in the response or otherwise needs to be
+decoded, <code class="docutils literal notranslate"><span class="pre">response_data_extract</span></code> can be used. It should take one parameter (the
+response) and return the desired data from it. This function should not have any
+side-effects. <code class="docutils literal notranslate"><span class="pre">response_data_extract</span></code> is also used by the <code class="docutils literal notranslate"><span class="pre">response_data</span></code>
+property, see that property documentation for details.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>response</strong> (<em>any</em><em>, </em><em>optional</em>) – Whatever kind of response object needs tracking.</p></li>
+<li><p><strong>description</strong> (<em>str</em><em>, </em><em>optional</em>) – Description of this particular response.</p></li>
+<li><p><strong>response_callback</strong> (<em>function w/no parameters</em><em>, </em><em>optional</em>) – A callback to use in place of the <code class="docutils literal notranslate"><span class="pre">response</span></code> field.</p></li>
+<li><p><strong>response_data_extract</strong> (<em>function w/1 parameter</em><em>, </em><em>optional</em>) – A callback used to extract wanted data from the response.</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – any additional attributes to set on this object,
+based on the name/value pairs in kwargs.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="jgt_common.ResponseInfo.classify_data">
+<code class="sig-name descname">classify_data</code><em class="property"> = ('requests', 'class')</em><a class="headerlink" href="#jgt_common.ResponseInfo.classify_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="jgt_common.ResponseInfo.response_data">
+<em class="property">property </em><code class="sig-name descname">response_data</code><a class="headerlink" href="#jgt_common.ResponseInfo.response_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property that returns the data from a response.</p>
+<ol class="arabic simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">response_callback</span></code> is set, that is used to obtain the response,
+otherwise the <code class="docutils literal notranslate"><span class="pre">response</span></code> attribute is used.
+If the <code class="docutils literal notranslate"><span class="pre">response_callback</span></code> is called,
+it’s result is assigned to the <code class="docutils literal notranslate"><span class="pre">.response</span></code> attribute and
+the <code class="docutils literal notranslate"><span class="pre">response_callback</span></code> attribute is set to None.
+This is to prevent the callback from being invoked more than once.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">response_data_extract</span></code> is set, it is called on the response
+from step 1, and it’s return value is the value of this property.
+Otherwise the result of step 1 is returned as is.
+Note that in this step the <code class="docutils literal notranslate"><span class="pre">.response</span></code> attribute is not changed,
+the <code class="docutils literal notranslate"><span class="pre">response_data_extract</span></code> callback is expected to have no side-effects.</p></li>
+</ol>
+</dd></dl>
+
+<dl class="method">
+<dt id="jgt_common.ResponseInfo.run_response_callback">
+<code class="sig-name descname">run_response_callback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#ResponseInfo.run_response_callback"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.ResponseInfo.run_response_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the <code class="docutils literal notranslate"><span class="pre">response_callback</span></code>, if any, and set <code class="docutils literal notranslate"><span class="pre">response</span></code> to the result.</p>
+<p>Set <code class="docutils literal notranslate"><span class="pre">response_callback</span></code> to None so iit isn’t run more than once.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="jgt_common.ResponseList">
+<em class="property">class </em><code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">ResponseList</code><a class="reference internal" href="_modules/jgt_common.html#ResponseList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.ResponseList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#jgt_common.NotEmptyList" title="jgt_common.NotEmptyList"><code class="xref py py-class docutils literal notranslate"><span class="pre">jgt_common.NotEmptyList</span></code></a>, <a class="reference internal" href="#jgt_common.CommonAttributeList" title="jgt_common.CommonAttributeList"><code class="xref py py-class docutils literal notranslate"><span class="pre">jgt_common.CommonAttributeList</span></code></a></p>
+<p>A list specialized for testing, w/ResponseInfo object items.</p>
+<p>To best understand this class, it is important to have
+a strong understanding of <a class="reference internal" href="#jgt_common.CommonAttributeList" title="jgt_common.CommonAttributeList"><code class="xref py py-class docutils literal notranslate"><span class="pre">CommonAttributeList</span></code></a> and
+<a class="reference internal" href="#jgt_common.ResponseInfo" title="jgt_common.ResponseInfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">ResponseInfo</span></code></a>.
+The common workflow for <code class="docutils literal notranslate"><span class="pre">ResponseList</span></code> relies greatly on those other connected
+pieces.</p>
+<p>For example, you might utilize this class in a ways such as this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">responses</span> <span class="o">=</span> <span class="n">ResponseList</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">responses</span><span class="o">.</span><span class="n">build_and_set</span><span class="p">(</span><span class="n">response</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">get_thing</span><span class="p">())</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># All the `.response` fields, see `CommonAttributeList`</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">response</span> <span class="ow">in</span> <span class="n">responses</span><span class="o">.</span><span class="n">response</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">assert</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;thing&quot;</span><span class="p">]</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">responses</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+<span class="gp">... </span>    <span class="n">ResponseInfo</span><span class="p">(</span><span class="n">response</span><span class="o">=</span><span class="n">client</span><span class="o">.</span><span class="n">get_thing</span><span class="p">(</span><span class="n">param</span><span class="p">),</span>
+<span class="go">                     description=f&quot;Getting {param}...&quot;)</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">my_params</span>
+<span class="gp">... </span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="jgt_common.ResponseList.build_and_set">
+<code class="sig-name descname">build_and_set</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#ResponseList.build_and_set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.ResponseList.build_and_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create object and then set it on the list.</p>
+<p>Create ResponseInfo object with args &amp; kwargs, then <code class="docutils literal notranslate"><span class="pre">.set</span></code> it on this
+ResponseList.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="jgt_common.ResponseList.classify_data">
+<code class="sig-name descname">classify_data</code><em class="property"> = ('requests', 'class')</em><a class="headerlink" href="#jgt_common.ResponseList.classify_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="jgt_common.ResponseList.run_response_callbacks">
+<code class="sig-name descname">run_response_callbacks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#ResponseList.run_response_callbacks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.ResponseList.run_response_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call <code class="docutils literal notranslate"><span class="pre">run_response_callback</span></code> on each item of this ReponseList.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="jgt_common.ResponseList.set">
+<code class="sig-name descname">set</code><span class="sig-paren">(</span><em class="sig-param">resp</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#ResponseList.set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.ResponseList.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear and set the contents of this list to single object / iterator of objects.</p>
+<p>Generators will be converted into a list to allow access more than once.</p>
+<p>This method can be handy/useful when transforming this list’s contents
+from one form to another, such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">x</span> <span class="o">=</span> <span class="n">CommonAttributeList</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="o">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">x</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">transform</span><span class="p">(</span><span class="n">thing</span><span class="p">,</span> <span class="n">doo_dad</span><span class="p">)</span> <span class="k">for</span> <span class="n">thing</span> <span class="ow">in</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="jgt_common.ResponseList.single_item">
+<em class="property">property </em><code class="sig-name descname">single_item</code><a class="headerlink" href="#jgt_common.ResponseList.single_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property - Assert this list has one item, and return that item.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="jgt_common.UUID_BASIC_RE">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">UUID_BASIC_RE</code><em class="property"> = '[\\da-fA-F]{8}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{12}'</em><a class="headerlink" href="#jgt_common.UUID_BASIC_RE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Regular expression (RE) for matching UUID string forms.</p>
+<p>This RE is not anchored, or delimited, for maximum reuse.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="jgt_common.UUID_ISOLATED_RE">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">UUID_ISOLATED_RE</code><em class="property"> = '\\b[\\da-fA-F]{8}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{4}-[\\da-fA-F]{12}\\b'</em><a class="headerlink" href="#jgt_common.UUID_ISOLATED_RE" title="Permalink to this definition">¶</a></dt>
+<dd><p>RE for matching an UUID that is not part of a larger “word”.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.always_false">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">always_false</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#always_false"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.always_false" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return False regardless of any provided arguments.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.always_true">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">always_true</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#always_true"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.always_true" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True regardless of any provided arguments.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.build_classification_rst_string">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">build_classification_rst_string</code><span class="sig-paren">(</span><em class="sig-param">from_dict</em>, <em class="sig-param">for_module</em>, <em class="sig-param">category_name_mappings</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#build_classification_rst_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.build_classification_rst_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create rST for all the items in from_dict that are part of for_module.</p>
+<p class="rubric">Example</p>
+<dl class="simple">
+<dt>__doc__ += build_classification_rst_string(globals(), __name__, &lt;category</dt><dd><p>mappings dict&gt;)</p>
+</dd>
+</dl>
+<p>The <code class="docutils literal notranslate"><span class="pre">for_module</span></code> parameter is needed because often <code class="docutils literal notranslate"><span class="pre">globals()</span></code>
+contains symbols imported from other modules not be documented here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>from_dict</strong> (<em>dict</em>) – A dictionary of name to function/class mappings,
+such as from locals() or globals()</p></li>
+<li><p><strong>for_module</strong> (<em>str</em>) – The module for which rST documentation is desired.</p></li>
+<li><p><strong>category_name_mappings</strong> (<em>str</em>) – Map from the short hand names used in the
+<a class="reference internal" href="#jgt_common.classify" title="jgt_common.classify"><code class="xref py py-func docutils literal notranslate"><span class="pre">classify()</span></code></a> decorator to the desired category table label.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>multiline rST string.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.check_until">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">check_until</code><span class="sig-paren">(</span><em class="sig-param">function_call</em>, <em class="sig-param">is_complete_validator</em>, <em class="sig-param">timeout=300</em>, <em class="sig-param">cycle_secs=5</em>, <em class="sig-param">logger=&lt;Logger jgt_common (WARNING)&gt;</em>, <em class="sig-param">fn_args=None</em>, <em class="sig-param">fn_kwargs=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#check_until"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.check_until" title="Permalink to this definition">¶</a></dt>
+<dd><p>Periodically call a function until its result validates or the timeout is exceeded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>function_call</strong> (<em>function</em>) – The function to be called</p></li>
+<li><p><strong>is_complete_validator</strong> (<em>function</em>) – a fn that will accept the output from
+function_call and return False if the call should continue repeating (still
+pending result), or True if the checked result is complete and may be
+returned.</p></li>
+<li><p><strong>timeout</strong> (<em>int</em>) – maximum number of seconds to “check until” before raising an
+exception.</p></li>
+<li><p><strong>cycle_secs</strong> (<em>int</em>) – how long to wait (in seconds) in between calls to
+function_call.</p></li>
+<li><p><strong>logger</strong> (<em>logging.logger</em><em>, </em><em>optional</em>) – a logging instance to be used for debug info,
+or <code class="docutils literal notranslate"><span class="pre">None</span></code> to suppress logging by this function.</p></li>
+<li><p><strong>fn_args</strong> (<em>tuple</em><em>, </em><em>optional</em>) – tuple of positional args to be provided to
+function_call</p></li>
+<li><p><strong>fn_kwargs</strong> (<em>dict</em><em>, </em><em>optional</em>) – keyword args to be provided to function_call</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>the result of function_call when the is_complete_validator returns any True</dt><dd><p>value.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>any</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference internal" href="#jgt_common.IncompleteAtTimeoutException" title="jgt_common.IncompleteAtTimeoutException"><strong>jgt_common.IncompleteAtTimeoutException</strong></a> – if function_call’s result never
+    satisfies the is_complete_validator before timeout is reached.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="data">
+<dt id="jgt_common.class_lookup">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">class_lookup</code><em class="property"> = {}</em><a class="headerlink" href="#jgt_common.class_lookup" title="Permalink to this definition">¶</a></dt>
+<dd><p>This dictionary is to allow code that needs to have very late binding of a class
+to look up the class here, and code that needs to control another module’s use of a
+late bound class to set it in this dictionary.</p>
+<p>Code accessing this dictionary should use <code class="docutils literal notranslate"><span class="pre">.get()</span></code> with a default value so that
+<cite>this</cite> module doesn’t have to import lots of things here to set up all the defaults.
+Code accessing this dictionary should publish which key(s) it will be using so that
+modules wishing to retarget those classes will know which keys to set.</p>
+<p>Code setting values in this dictionary so do so <cite>before</cite> importing modules that
+will use that value. Setting values in this dictionary is only needed when the
+default values need to be changed.</p>
+<p>(Motivation: the requests client logging code needs to be able to use a custom
+class instead of just <code class="docutils literal notranslate"><span class="pre">requests.Session</span></code> when being used by testing code
+with the Locust test runner, and it uses this dictionary to accomplish this.)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.classify">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">classify</code><span class="sig-paren">(</span><em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#classify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.classify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add glossary subject category classification meta-data to it’s target.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.cleanup_and_exit">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">cleanup_and_exit</code><span class="sig-paren">(</span><em class="sig-param">dir_name=None</em>, <em class="sig-param">status=0</em>, <em class="sig-param">message=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#cleanup_and_exit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.cleanup_and_exit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleanup a directory tree that was created and exit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dir_name</strong> (<em>string</em>) – Full path to a directory to remove (optional)</p></li>
+<li><p><strong>status</strong> (<em>int</em>) – Exit code to use for exit (optional)</p></li>
+<li><p><strong>message</strong> (<em>string</em>) – Message to print to standard error (optional)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.default_if_none">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">default_if_none</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">default</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#default_if_none"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.default_if_none" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">default</span> <span class="pre">if</span> <span class="pre">value</span> <span class="pre">is</span> <span class="pre">None</span> <span class="pre">else</span> <span class="pre">value</span></code>.</p>
+<dl class="simple">
+<dt>Use because:</dt><dd><ul class="simple">
+<li><p>no chance of the value stutter being mistyped, speeds up code reading time.</p></li>
+<li><p>easier to read when value or default are complex expressions.</p></li>
+<li><p>can save having to create local variable(s) to shorten the
+<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">..</span> <span class="pre">is</span> <span class="pre">None</span> <span class="pre">...</span></code> form.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.dict_from">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">dict_from</code><span class="sig-paren">(</span><em class="sig-param">iterable</em>, <em class="sig-param">key_transform=&lt;function identity&gt;</em>, <em class="sig-param">value_transform=&lt;function identity&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#dict_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.dict_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build a new dict based on turning values from an iterable into key/value pairs.</p>
+<p class="rubric">Example</p>
+<p>A common use case would be to build a dict from a list of values,
+using the list values as keys,
+and building dict values as a transform from the list values.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="n">dict_from</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">value_transform</span><span class="o">=</span><span class="k">lambda</span> <span class="n">n</span><span class="p">:</span> <span class="n">n</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iterable</strong> (<em>iterable</em>) – the source for the dictionary to be created</p></li>
+<li><p><strong>key_transform</strong> (<em>function</em>) – Takes a key and returns a new key to use.</p></li>
+<li><p><strong>value_transform</strong> (<em>function</em>) – Take a value and returns a new value to use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new dictionary with key and values as transformed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.dict_strip_value">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">dict_strip_value</code><span class="sig-paren">(</span><em class="sig-param">a_dict</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#dict_strip_value"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.dict_strip_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new dict based on stripping out any key with the given value.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default value <code class="docutils literal notranslate"><span class="pre">None</span></code> is chosen because it is a common case.
+Unlike other functions, value <code class="docutils literal notranslate"><span class="pre">None</span></code> is literally the value <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a_dict</strong> (<em>dict</em>) – A dictionary to strip values from.</p></li>
+<li><p><strong>value</strong> – Any value that should be stripped from the dictionary.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new dictionary without key/value pairs for the given value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.dict_transform">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">dict_transform</code><span class="sig-paren">(</span><em class="sig-param">a_dict</em>, <em class="sig-param">key_transform=&lt;function identity&gt;</em>, <em class="sig-param">value_transform=&lt;function identity&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#dict_transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.dict_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new dict based on transforming the keys and/or values of <code class="docutils literal notranslate"><span class="pre">a_dict</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a_dict</strong> (<em>dict</em>) – the source dictionary to process</p></li>
+<li><p><strong>key_transform</strong> (<em>function</em>) – Takes a key and returns a new key to use.</p></li>
+<li><p><strong>value_transform</strong> (<em>function</em>) – Takes a value and returns a new value to use.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new dictionary with keys and values as transformed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.display_name">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">display_name</code><span class="sig-paren">(</span><em class="sig-param">path</em>, <em class="sig-param">package_name=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#display_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a human-readable name for a given project.</p>
+<p>Determine the display name for a project given a path and (optional) package name.
+If a display_name.txt file is found, the first line is returned. Otherwise, return a
+title-cased string from either the base directory or package_name (if provided).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – Path for searching</p></li>
+<li><p><strong>package_name</strong> (<em>str</em>) – Sphinx-style, dot-delimited package name (optional)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A display name for the provided path</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.error_if">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">error_if</code><span class="sig-paren">(</span><em class="sig-param">check</em>, <em class="sig-param">status=None</em>, <em class="sig-param">message=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#error_if"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.error_if" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exit the program if a provided check is true.</p>
+<p>Exit the program if the check is true. If a status is provided, that code is used
+for the exit code; otherwise the value from the check is used. An optional message
+for standard error can also be provided.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>check</strong> – Anything with truthiness that can check if the program should exit or not</p></li>
+<li><p><strong>status</strong> (<em>int</em>) – Exit code to use for exit (optional)</p></li>
+<li><p><strong>message</strong> (<em>string</em>) – Message to print to standard error if check is True (optional)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.execute_command_list">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">execute_command_list</code><span class="sig-paren">(</span><em class="sig-param">commands_to_run</em>, <em class="sig-param">verbose=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#execute_command_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.execute_command_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute each command in the list.</p>
+<p>If any command fails, print a helpful message and exit with that status.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.exit">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">exit</code><span class="sig-paren">(</span><em class="sig-param">status=0</em>, <em class="sig-param">message=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#exit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.exit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exit the program and optionally print a message to standard error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>status</strong> (<em>int</em>) – Exit code to use for exit (optional)</p></li>
+<li><p><strong>message</strong> (<em>string</em>) – Message to print to standard error (optional)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.fib_or_max">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">fib_or_max</code><span class="sig-paren">(</span><em class="sig-param">fib_number_index</em>, <em class="sig-param">max_number=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#fib_or_max"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.fib_or_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the nth Fibonacci number or max_number, which ever is smaller.</p>
+<p>This can be used for retrying failed operations with progressively longer
+gaps between retries, cap’d at the max_number paraemter if given.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.filter_dict">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">filter_dict</code><span class="sig-paren">(</span><em class="sig-param">a_dict</em>, <em class="sig-param">keep_key=&lt;function always_true&gt;</em>, <em class="sig-param">keep_value=&lt;function always_true&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#filter_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.filter_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter a dictionary based on truthiness.</p>
+<p>Return a new dict based on keeping only those keys _and_ values whose function
+returns True.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a_dict</strong> (<em>dict</em>) – A dictionary to filter values from.</p></li>
+<li><p><strong>keep_key</strong> (<em>function</em>) – Return True if the key is to be kept.</p></li>
+<li><p><strong>keep_value</strong> (<em>function</em>) – Return True if the value is to be kept.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A new dictionary with only the desired key, value pairs.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.filter_lines">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">filter_lines</code><span class="sig-paren">(</span><em class="sig-param">line_filter</em>, <em class="sig-param">lines</em>, <em class="sig-param">return_type=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#filter_lines"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.filter_lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter the given lines based on the given filter function.</p>
+<p>This function by default will return the same type that it is given.
+If you’d like, you may return a different type by providing the
+<code class="docutils literal notranslate"><span class="pre">return_type</span></code> parameter.</p>
+<p>The expected values for the the <code class="docutils literal notranslate"><span class="pre">lines</span></code> parameter type and the
+<code class="docutils literal notranslate"><span class="pre">return_type</span></code> value are <code class="docutils literal notranslate"><span class="pre">str</span></code> and <code class="docutils literal notranslate"><span class="pre">list</span></code>. Any other types/values
+may cause unexpected behavior.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line_filter</strong> (<em>Callable</em>) – The callable function to be used to filter each line.
+It should take a single string parameter and return a boolean.</p></li>
+<li><p><strong>lines</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Either a string with newline characters splitting
+the lines, or a list of lines as strings.</p></li>
+<li><p><strong>return_type</strong> (<em>type</em>) – The desired return type. If not provided, the type of the
+<code class="docutils literal notranslate"><span class="pre">lines</span></code> parameter will be used.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The filtered lines.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[str, List[str]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.first_line_of_doc_string">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">first_line_of_doc_string</code><span class="sig-paren">(</span><em class="sig-param">thing</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#first_line_of_doc_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.first_line_of_doc_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the first non-empty line of the doc string for thing, if there is one.</p>
+<p>If thing is a class and has no doc string,
+return the first line of the __init__ method doc string if there is one.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.format_if">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">format_if</code><span class="sig-paren">(</span><em class="sig-param">format_str</em>, <em class="sig-param">content</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#format_if"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.format_if" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a message string with a formatted value if any content value is present.</p>
+<p>Useful for error-checking scenarios where you want a prepared error message
+if failures are present (passed in via content), or no message if no failures.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>format_str</strong> (<em>str</em>) – A message string with a single format brace to be filled</p></li>
+<li><p><strong>content</strong> (<em>str</em>) – A value to be filled into the format_str if present</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>either the format_str with content included if content present,
+or an empty string if no content.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.generate_random_string">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">generate_random_string</code><span class="sig-paren">(</span><em class="sig-param">prefix=''</em>, <em class="sig-param">suffix=''</em>, <em class="sig-param">size=8</em>, <em class="sig-param">choose_from=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#generate_random_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.generate_random_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a random string of the specified size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prefix</strong> (<em>str</em><em>, </em><em>optional</em>) – String to prepend to the beginning of the random string.</p></li>
+<li><p><strong>suffix</strong> (<em>str</em><em>, </em><em>optional</em>) – String to append to the end of the random string.</p></li>
+<li><p><strong>size</strong> (<em>int</em><em>, </em><em>optional</em>) – Number of characters the random string should have.
+(defaults to 8)</p></li>
+<li><p><strong>choose_from</strong> (<em>str</em>) – A string containing the characters from which the randomness
+will be chosen. If not provided, it will choose from lowercase letters and
+digits.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A randomly generated string.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – if the given length is incompatible with prefix/suffix length</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">generate_random_string</span><span class="p">()</span>
+<span class="go">&#39;vng345jn&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">generate_random_string</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;Lbs-&#39;</span><span class="p">,</span> <span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;-test&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="go">&#39;Lbs-js7eh9-test&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">generate_random_string</span><span class="p">(</span><span class="n">prefix</span><span class="o">=</span><span class="s1">&#39;Lbs-&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="go">&#39;Lbs-js7eh98sfnk&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">generate_random_string</span><span class="p">(</span><span class="n">suffix</span><span class="o">=</span><span class="s1">&#39;-test&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="go">&#39;8sdfjs7eh9-test&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">generate_random_string</span><span class="p">(</span><span class="n">choose_from</span><span class="o">=</span><span class="s2">&quot;aeiou&quot;</span><span class="p">)</span>
+<span class="go">&#39;uiiaueea&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.get_file_contents">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">get_file_contents</code><span class="sig-paren">(</span><em class="sig-param">*paths</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#get_file_contents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.get_file_contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the contents of a file as a Python string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>*paths</strong> – All paths that lead to the file whole contents are to be retrieved.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The contents of the file.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.get_file_docstring">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">get_file_docstring</code><span class="sig-paren">(</span><em class="sig-param">file_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#get_file_docstring"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.get_file_docstring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the full docstring of a given python file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>str</em>) – The path to the file whose docstring should
+be gathered and returned.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The python file’s docstring.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.identity">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">identity</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#identity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.identity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build simple identity function based on provided parameters.</p>
+<p>A single parameter is returned as is, multiple parameters are returned as a tuple.</p>
+<p>From <a class="reference external" href="https://stackoverflow.com/questions/8748036/is-there-a-builtin-identity-function-in-python">https://stackoverflow.com/questions/8748036/is-there-a-builtin-identity-function-in-python</a>  # noqa: E501
+Not the top voted answer, but it handles both single and multiple parameters.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.index_or_default">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">index_or_default</code><span class="sig-paren">(</span><em class="sig-param">a_list</em>, <em class="sig-param">value</em>, <em class="sig-param">default=-1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#index_or_default"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.index_or_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the index of a value from a list, or a default if not found.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a_list</strong> (<em>list</em>) – A list from which to find the index</p></li>
+<li><p><strong>value</strong> (<em>any</em>) – the list item whose index is sought</p></li>
+<li><p><strong>default</strong> (<em>any</em>) – the value to return if the value is not in the list</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an index value (int) for the list item, or default value (any)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int,any</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.is_iterable">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">is_iterable</code><span class="sig-paren">(</span><em class="sig-param">item</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#is_iterable"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.is_iterable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return True if item is iterable, False otherwise, using an iter(item) test.</p>
+<p>From the Python documentation for class <code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.Iterable</span></code>:</p>
+<blockquote>
+<div><p>Checking isinstance(obj, Iterable) detects classes that are registered as
+Iterable or that have an __iter__() method, but it does not detect classes that
+iterate with the __getitem__() method.
+<em>The only reliable way to determine whether an object is iterable is to call
+iter(obj)</em>.</p>
+</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.list_from">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">list_from</code><span class="sig-paren">(</span><em class="sig-param">item</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#list_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.list_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a list from a single item or an iterable.</p>
+<p>Any item that is “false-y”, will result in an empty list. Strings and dictionaries
+will be treated as single items, and not iterable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>item</strong> – A single item or an iterable.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list from the item.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">list_from</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="go">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list_from</span><span class="p">(</span><span class="s1">&#39;abcd&#39;</span><span class="p">)</span>
+<span class="go">[&#39;abcd&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list_from</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
+<span class="go">[1234]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list_from</span><span class="p">({</span><span class="s1">&#39;abcd&#39;</span><span class="p">:</span> <span class="mi">1234</span><span class="p">})</span>
+<span class="go">[{&#39;abcd&#39;: 1234}]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list_from</span><span class="p">([</span><span class="s1">&#39;abcd&#39;</span><span class="p">,</span> <span class="mi">1234</span><span class="p">])</span>
+<span class="go">[&#39;abcd&#39;, 1234]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list_from</span><span class="p">({</span><span class="s1">&#39;abcd&#39;</span><span class="p">,</span> <span class="mi">1234</span><span class="p">})</span>
+<span class="go">[&#39;abcd&#39;, 1234]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.must_be_in_virtual_environment">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">must_be_in_virtual_environment</code><span class="sig-paren">(</span><em class="sig-param">exit_code=1</em>, <em class="sig-param">message='Must be running in a Python virtual environment</em>, <em class="sig-param">aborting!'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#must_be_in_virtual_environment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.must_be_in_virtual_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure the current process is running in a virtual environment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>exit_code</strong> (<em>int</em><em>, </em><em>optional</em>) – Exit code to use if not running in a virtual
+environment.</p></li>
+<li><p><strong>message</strong> (<em>string</em><em>, </em><em>optional</em>) – Message to print if not running in a virtual
+environment.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.must_get_key">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">must_get_key</code><span class="sig-paren">(</span><em class="sig-param">a_dict</em>, <em class="sig-param">key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#must_get_key"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.must_get_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Either return the value for the key, or raise an exception.</p>
+<p>The exception will indicate what the valid keys are.
+Inspired by Gherkin steps so that a typo in the Gherkin
+will result in a more helpful error message than the stock KeyError.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a_dict</strong> (<em>dict</em>) – Dictionary with the values</p></li>
+<li><p><strong>key</strong> (<em>str</em>) – The key whose value is desired</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value found on the key</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>KeyError</strong> – if the given key is not present in the dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.must_get_keys">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">must_get_keys</code><span class="sig-paren">(</span><em class="sig-param">a_dict</em>, <em class="sig-param">*keys</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#must_get_keys"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.must_get_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Either return the value found for the keys provided, or raise an exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a_dict</strong> (<em>dict</em>) – Dictionary with the values</p></li>
+<li><p><strong>keys</strong> (<em>str</em>) – The key or keys whose value is desired</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The value found on the final key</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>KeyError</strong> – if any of the given keys are not present in the dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.no_nones">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">no_nones</code><span class="sig-paren">(</span><em class="sig-param">iterable</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#no_nones"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.no_nones" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of the non-None values in iterable.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.no_op">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">no_op</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#no_op"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.no_op" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reusable no-op function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.only_item_of">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">only_item_of</code><span class="sig-paren">(</span><em class="sig-param">item_sequence</em>, <em class="sig-param">label=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#only_item_of"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.only_item_of" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert item_sequence has only one item, and return that item.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.padded_list">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">padded_list</code><span class="sig-paren">(</span><em class="sig-param">iterable</em>, <em class="sig-param">size</em>, <em class="sig-param">padding=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#padded_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.padded_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a fixed-length list from an iterable, padding as needed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>iterable</strong> (<em>iterable</em>) – Any iterable that needs padding</p></li>
+<li><p><strong>size</strong> (<em>int</em>) – The length for the returned list</p></li>
+<li><p><strong>padding</strong> – Any value that should be used to pad an iterable that is too short</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The iterable parameter converted to a list, up to size, padded as needed.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.re_for_hex_digits">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">re_for_hex_digits</code><span class="sig-paren">(</span><em class="sig-param">length</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#re_for_hex_digits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.re_for_hex_digits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return regular expression for matching exactly <code class="docutils literal notranslate"><span class="pre">length</span></code> hex digits.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.retry_on_exceptions">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">retry_on_exceptions</code><span class="sig-paren">(</span><em class="sig-param">max_retry_count</em>, <em class="sig-param">exceptions</em>, <em class="sig-param">max_retry_sleep=30</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#retry_on_exceptions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.retry_on_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retry a function based on provided parameters.</p>
+<p>A wrapper to retry a function max_retry_count times if any of the given exceptions
+are raised.</p>
+<p>In the event the exception/exceptions are raised, this code will sleep for ever
+increasing amounts of time (using the fibonacci sequence) but capping at
+max_retry_sleep seconds.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>max_retry_count</strong> (<em>int</em>) – The maximum number of retries, must be &gt; 0..</p></li>
+<li><p><strong>exceptions</strong> (<em>exception</em><em> or </em><em>tuple of exceptions</em>) – The exceptions to catch and
+retry on.</p></li>
+<li><p><strong>max_retry_sleep</strong> (<em>int</em><em>, </em><em>float</em>) – The maximum time to sleep between retries.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.safe_run">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">safe_run</code><span class="sig-paren">(</span><em class="sig-param">commands</em>, <em class="sig-param">cwd=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#safe_run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.safe_run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the given list of commands, only return if no error.</p>
+<p>If there is an error in attempting or actually running the commands,
+error messages are printed to stdout and <code class="docutils literal notranslate"><span class="pre">sys.exit()</span></code> will be called.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.string_to_list">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">string_to_list</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">sep='</em>, <em class="sig-param">'</em>, <em class="sig-param">maxsplit=-1</em>, <em class="sig-param">chars=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#string_to_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.string_to_list" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">.split()</span></code> a string into a list and <code class="docutils literal notranslate"><span class="pre">.strip()</span></code> each piece.</p>
+<p>For handling lists of things, from config files, etc.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>str</em>) – the source string to process</p></li>
+<li><p><strong>sep</strong> (<em>str</em><em>, </em><em>optional</em>) – The <code class="docutils literal notranslate"><span class="pre">.split</span></code> <code class="docutils literal notranslate"><span class="pre">sep</span></code> (separator) to use.</p></li>
+<li><p><strong>maxsplit</strong> (<em>int</em><em>, </em><em>optional</em>) – The <code class="docutils literal notranslate"><span class="pre">.split</span></code> <code class="docutils literal notranslate"><span class="pre">maxsplit</span></code> parameter to use.</p></li>
+<li><p><strong>chars</strong> (<em>str</em><em>, </em><em>optional</em>) – The <code class="docutils literal notranslate"><span class="pre">.strip</span></code> <code class="docutils literal notranslate"><span class="pre">chars</span></code> parameter to use.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.ticketing_system_for">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">ticketing_system_for</code><span class="sig-paren">(</span><em class="sig-param">ticket</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#ticketing_system_for"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.ticketing_system_for" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Ticketing System/Type for the given ticket, or the empty string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.truths_from">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">truths_from</code><span class="sig-paren">(</span><em class="sig-param">iterable</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#truths_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.truths_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of the truthy values in iterable.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.url_for_ticket">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">url_for_ticket</code><span class="sig-paren">(</span><em class="sig-param">ticketing_system</em>, <em class="sig-param">ticket</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#url_for_ticket"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.url_for_ticket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a URL for the given ticketing_system, ticket pair.</p>
+<p>Does NOT validate that ticket string “looks” like a ticket for the ticketing system.</p>
+<p>Raises if ticketing_system is not a supported system.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.url_if_ticket">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">url_if_ticket</code><span class="sig-paren">(</span><em class="sig-param">ticket</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#url_if_ticket"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.url_if_ticket" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a Ticket URL if a ticket is found.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ticket</strong> (<em>string</em>) – Possible ticket ID</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Either a URL if a string is found, otherwise an empty string.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.var_from_env">
+<code class="sig-prename descclassname">jgt_common.</code><code class="sig-name descname">var_from_env</code><span class="sig-paren">(</span><em class="sig-param">var_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common.html#var_from_env"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.var_from_env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to get a value from an environment variable.</p>
+<p>Get an environment variable and raise an error if not set / has an empty value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The value of the environment variable.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – if the variable name is not set or has an empty value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-jgt_common.assert_">
+<span id="jgt-common-assert-module"></span><h2>jgt_common.assert_ module<a class="headerlink" href="#module-jgt_common.assert_" title="Permalink to this headline">¶</a></h2>
+<p>Convenience functions for doing asserts with helpful names and helpful messages.</p>
+<dl class="function">
+<dt id="jgt_common.assert_.almost_equal">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">almost_equal</code><span class="sig-paren">(</span><em class="sig-param">actual</em>, <em class="sig-param">expected</em>, <em class="sig-param">places=2</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#almost_equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.almost_equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that actual and expected are within <cite>places</cite> equal.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.any_in">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">any_in</code><span class="sig-paren">(</span><em class="sig-param">a_sequence</em>, <em class="sig-param">b_sequence</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#any_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.any_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert at least one member of a_sequence is in b_sequence.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.eq">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">eq</code><span class="sig-paren">(</span><em class="sig-param">expected</em>, <em class="sig-param">actual</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#eq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.eq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert the values are equal.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.greater">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">greater</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#greater"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.greater" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that a &gt; b.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.greater_equal">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">greater_equal</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#greater_equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.greater_equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that a &gt;= b.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.is_close">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">is_close</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">msg=''</em>, <em class="sig-param">**isclose_kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#is_close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.is_close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that math.isclose returns True based on the given values.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.is_in">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">is_in</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">sequence</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#is_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.is_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that value is in the sequence.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.is_instance">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">is_instance</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">of_type</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#is_instance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.is_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert value is instance of of_type.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.is_not_empty">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">is_not_empty</code><span class="sig-paren">(</span><em class="sig-param">sequence</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#is_not_empty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.is_not_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Semantically more helpful than just <code class="docutils literal notranslate"><span class="pre">assert</span> <span class="pre">sequence</span></code>.</p>
+<p>Sequences and containers in python are False when empty, and True when not empty.
+This helper reads better in the test code and in the error message.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.is_not_none">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">is_not_none</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#is_not_none"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.is_not_none" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert a is not None.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.is_singleton_list">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">is_singleton_list</code><span class="sig-paren">(</span><em class="sig-param">sequence</em>, <em class="sig-param">item_description='something'</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#is_singleton_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.is_singleton_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make sure the sequence has exactly one item (of item_description).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.less">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">less</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#less"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.less" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that a &lt; b.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.less_equal">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">less_equal</code><span class="sig-paren">(</span><em class="sig-param">a</em>, <em class="sig-param">b</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#less_equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.less_equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that a &lt;= b.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.not_eq">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">not_eq</code><span class="sig-paren">(</span><em class="sig-param">expected</em>, <em class="sig-param">actual</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#not_eq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.not_eq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert the values to not be equal.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.assert_.not_in">
+<code class="sig-prename descclassname">jgt_common.assert_.</code><code class="sig-name descname">not_in</code><span class="sig-paren">(</span><em class="sig-param">item</em>, <em class="sig-param">sequence</em>, <em class="sig-param">msg=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/assert_.html#not_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.assert_.not_in" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert item is not in sequence.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-jgt_common.http_helpers">
+<span id="jgt-common-http-helpers-module"></span><h2>jgt_common.http_helpers module<a class="headerlink" href="#module-jgt_common.http_helpers" title="Permalink to this headline">¶</a></h2>
+<p>Tools for simplifying HTTP requests and responses.</p>
+<table class="colwidths-auto docutils align-default" id="id18">
+<caption><span class="caption-text">JSON related functions</span><a class="headerlink" href="#id18" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.http_helpers.safe_json_from" title="jgt_common.http_helpers.safe_json_from"><code class="xref py py-func docutils literal notranslate"><span class="pre">safe_json_from()</span></code></a></p></td>
+<td><p>Accept a response object and attempts to return the JSON-decoded data.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id19">
+<caption><span class="caption-text">Logging related functions</span><a class="headerlink" href="#id19" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.http_helpers.call_with_custom_logger" title="jgt_common.http_helpers.call_with_custom_logger"><code class="xref py py-func docutils literal notranslate"><span class="pre">call_with_custom_logger()</span></code></a></p></td>
+<td><p>Context Manager to make a call with a given curl_logger in place of the default.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id20">
+<caption><span class="caption-text">Requests’ Response object related functions</span><a class="headerlink" href="#id20" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.http_helpers.check_response_status_code" title="jgt_common.http_helpers.check_response_status_code"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_response_status_code()</span></code></a></p></td>
+<td><p>Check that a response’s status code matches an expected status description.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.http_helpers.create_error_message" title="jgt_common.http_helpers.create_error_message"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_error_message()</span></code></a></p></td>
+<td><p>Create a detailed error message based on an API call.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.http_helpers.get_data_from_response" title="jgt_common.http_helpers.get_data_from_response"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_data_from_response()</span></code></a></p></td>
+<td><p>Accept a response object and returns a dict of the data contained within.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.http_helpers.get_data_list" title="jgt_common.http_helpers.get_data_list"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_data_list()</span></code></a></p></td>
+<td><p>Get the full list of data from within a response, if the data is a list.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.http_helpers.response_if_status_check" title="jgt_common.http_helpers.response_if_status_check"><code class="xref py py-func docutils literal notranslate"><span class="pre">response_if_status_check()</span></code></a></p></td>
+<td><p>Validate a response matches the expected status code before returning.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.http_helpers.safe_json_from" title="jgt_common.http_helpers.safe_json_from"><code class="xref py py-func docutils literal notranslate"><span class="pre">safe_json_from()</span></code></a></p></td>
+<td><p>Accept a response object and attempts to return the JSON-decoded data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.http_helpers.safe_request_validator" title="jgt_common.http_helpers.safe_request_validator"><code class="xref py py-func docutils literal notranslate"><span class="pre">safe_request_validator()</span></code></a></p></td>
+<td><p>Wrap a <code class="docutils literal notranslate"><span class="pre">check_request_until</span></code> validator in additional response checks.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.http_helpers.validate_response_status_code" title="jgt_common.http_helpers.validate_response_status_code"><code class="xref py py-func docutils literal notranslate"><span class="pre">validate_response_status_code()</span></code></a></p></td>
+<td><p>Assert that a response’s status code matches an expected status code.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id21">
+<caption><span class="caption-text">HTTP Status code functions</span><a class="headerlink" href="#id21" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.http_helpers.check_response_status_code" title="jgt_common.http_helpers.check_response_status_code"><code class="xref py py-func docutils literal notranslate"><span class="pre">check_response_status_code()</span></code></a></p></td>
+<td><p>Check that a response’s status code matches an expected status description.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.http_helpers.is_status_code" title="jgt_common.http_helpers.is_status_code"><code class="xref py py-func docutils literal notranslate"><span class="pre">is_status_code()</span></code></a></p></td>
+<td><p>Determine if a given status code matches the expected result.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.http_helpers.response_if_status_check" title="jgt_common.http_helpers.response_if_status_check"><code class="xref py py-func docutils literal notranslate"><span class="pre">response_if_status_check()</span></code></a></p></td>
+<td><p>Validate a response matches the expected status code before returning.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.http_helpers.validate_response_status_code" title="jgt_common.http_helpers.validate_response_status_code"><code class="xref py py-func docutils literal notranslate"><span class="pre">validate_response_status_code()</span></code></a></p></td>
+<td><p>Assert that a response’s status code matches an expected status code.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-default" id="id22">
+<caption><span class="caption-text">String related functions</span><a class="headerlink" href="#id22" title="Permalink to this table">¶</a></caption>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#jgt_common.http_helpers.create_error_message" title="jgt_common.http_helpers.create_error_message"><code class="xref py py-func docutils literal notranslate"><span class="pre">create_error_message()</span></code></a></p></td>
+<td><p>Create a detailed error message based on an API call.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#jgt_common.http_helpers.format_items_as_string_tree" title="jgt_common.http_helpers.format_items_as_string_tree"><code class="xref py py-func docutils literal notranslate"><span class="pre">format_items_as_string_tree()</span></code></a></p></td>
+<td><p>Format the items provided as a string representing a ‘tree’ format.</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<dl class="function">
+<dt id="jgt_common.http_helpers.call_with_custom_logger">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">call_with_custom_logger</code><span class="sig-paren">(</span><em class="sig-param">call</em>, <em class="sig-param">curl_logger</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#call_with_custom_logger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.call_with_custom_logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Context Manager to make a call with a given curl_logger in place of the default.</p>
+<p>If curl_logger is a last-only logger, call <code class="docutils literal notranslate"><span class="pre">.done()</span></code> on context exit.
+NOTE: for last-only loggers, the log will not be written until you exit the context.</p>
+<p class="rubric">Example</p>
+<p>Create a new callable based on ‘call’ that uses the logger ‘logger_to_use’:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">call_with_custom_logger</span><span class="p">(</span><span class="n">call</span><span class="p">,</span> <span class="n">logger_to_use</span><span class="p">)</span> <span class="k">as</span> <span class="n">call_using_logger</span><span class="p">:</span>
+    <span class="n">some_result</span> <span class="o">=</span> <span class="n">check_until</span><span class="p">(</span><span class="n">call_using_logger</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.http_helpers.check_response_status_code">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">check_response_status_code</code><span class="sig-paren">(</span><em class="sig-param">expected_status_description</em>, <em class="sig-param">response</em>, <em class="sig-param">call_description=None</em>, <em class="sig-param">additional_info=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#check_response_status_code"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.check_response_status_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check that a response’s status code matches an expected status description.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>expected_status_description</strong> (<em>str</em><em>, </em><em>int</em>) – The expected HTTP response status
+reason or code.</p></li>
+<li><p><strong>response</strong> (<em>Response</em>) – The python requests library response to validate.</p></li>
+<li><p><strong>call_description</strong> (<em>str</em>) – additional details about the call placed (optional)</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em>) – Additional Info to be passed to create_error_message</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>Empty string if response status code matches, or a detailed error message</dt><dd><p>otherwise</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.http_helpers.create_error_message">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">create_error_message</code><span class="sig-paren">(</span><em class="sig-param">summary_line</em>, <em class="sig-param">request</em>, <em class="sig-param">response_content</em>, <em class="sig-param">additional_info=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#create_error_message"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.create_error_message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a detailed error message based on an API call.</p>
+<p>This message will include information about the request and response,
+cutting off the response content at the set <code class="docutils literal notranslate"><span class="pre">MAX_ERROR_MESSAGE_CONTENT_LENGTH</span></code>.
+Additional information can be included in the message by including the
+<code class="docutils literal notranslate"><span class="pre">additional_info</span></code> parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>summary_line</strong> (<em>str</em>) – The first line of the message that describes the error.</p></li>
+<li><p><strong>request</strong> (<em>Request</em>) – The python requests library Request.</p></li>
+<li><p><strong>response_content</strong> (<em>str</em>) – The response content to be included in the response.</p></li>
+<li><p><strong>additional_info</strong> (<em>dict</em>) – A dictionary containing additional information to be
+included in the message. The keys and values will be separated by a
+<code class="docutils literal notranslate"><span class="pre">&quot;:&quot;</span></code> in the message. (optional)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The complete and detailed error message.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.http_helpers.format_items_as_string_tree">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">format_items_as_string_tree</code><span class="sig-paren">(</span><em class="sig-param">*items</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#format_items_as_string_tree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.format_items_as_string_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format the items provided as a string representing a “tree” format.</p>
+<p>Any lists or nested lists will be flattened, with each level of nested lists
+getting its own level of indentation. Each item, once flattened with the
+appropriate level of indentation provided, will be placed on its own line.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>An indented “tree” format of the items.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">format_items_as_string_tree</span><span class="p">(</span><span class="s1">&#39;ex1&#39;</span><span class="p">,</span> <span class="s1">&#39;ex2&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;nested1&#39;</span><span class="p">,</span> <span class="s1">&#39;nested2&#39;</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>                            <span class="p">[</span><span class="s1">&#39;double1&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;double2&#39;</span><span class="p">]],</span> <span class="s1">&#39;ex3&#39;</span><span class="p">)</span>
+<span class="go">    ex1</span>
+<span class="go">    ex2</span>
+<span class="go">        nested1</span>
+<span class="go">        nested2</span>
+<span class="go">            double1</span>
+<span class="go">            double2</span>
+<span class="go">    ex3</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.http_helpers.get_data_from_response">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">get_data_from_response</code><span class="sig-paren">(</span><em class="sig-param">response</em>, <em class="sig-param">dig_layers=None</em>, <em class="sig-param">check_empty=True</em>, <em class="sig-param">first_only=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#get_data_from_response"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.get_data_from_response" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accept a response object and returns a dict of the data contained within.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>response</strong> (<em>requests.models.Response</em>) – A Response object from a requests call</p></li>
+<li><p><strong>dig_layers</strong> (<em>list</em>) – List of keys to “dig” down into the response before returning</p></li>
+<li><p><strong>check_empty</strong> (<em>bool</em>) – If True, raises an AssertionError if the payload is empty</p></li>
+<li><p><strong>first_only</strong> (<em>bool</em>) – Strip the list wrapping the data and return the first result</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The data payload.</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span> <span class="o">==</span> <span class="p">{</span><span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;value&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span><span class="p">}],</span>
+<span class="go">                        &quot;other&quot;: &quot;&quot;}</span>
+<span class="go">True</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_data_from_response</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">dig_layers</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">])</span>
+<span class="go">{&#39;key&#39;: &#39;value&#39;}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_data_from_response</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">dig_layers</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">],</span> <span class="n">first_only</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go">[{&#39;key&#39;: &#39;value&#39;}, {&#39;key&#39;: &#39;value2&#39;}]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_data_from_response</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">dig_layers</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;other&#39;</span><span class="p">])</span>
+<span class="go">AssertionError: Payload was empty: &#39;&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_data_from_response</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">dig_layers</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;other&#39;</span><span class="p">],</span> <span class="n">check_empty</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="go">&quot;&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.http_helpers.get_data_list">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">get_data_list</code><span class="sig-paren">(</span><em class="sig-param">response</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#get_data_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.get_data_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the full list of data from within a response, if the data is a list.</p>
+<p>Helper around get_data_for_response that returns the full list of data
+if the data is in a list format, rather than the default of returning
+the first object inside the list.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">**kwargs</span></code> values and more information, see <a class="reference internal" href="#jgt_common.http_helpers.get_data_from_response" title="jgt_common.http_helpers.get_data_from_response"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_data_from_response()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.http_helpers.is_status_code">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">is_status_code</code><span class="sig-paren">(</span><em class="sig-param">expected_status_description</em>, <em class="sig-param">actual_status_code</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#is_status_code"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.is_status_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if a given status code matches the expected result.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>expected_status_description</strong> (<em>str</em><em>, </em><em>int</em>) – The result to match. Can be:
+- A Python requests libarary status reason (“OK”)
+- A phrase matching a <code class="docutils literal notranslate"><span class="pre">_status_code_ranges</span></code> key (‘a client error’)
+- An integer for the response status code (404)</p></li>
+<li><p><strong>actual_status_code</strong> (<em>int</em>) – the status code from the response to be validated</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Whether or not the actual status code matches the expected description.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – if an invalid <code class="docutils literal notranslate"><span class="pre">expected_status_description</span></code> value is provided.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.http_helpers.response_if_status_check">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">response_if_status_check</code><span class="sig-paren">(</span><em class="sig-param">call_description</em>, <em class="sig-param">response</em>, <em class="sig-param">target_status='a successful response'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#response_if_status_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.response_if_status_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validate a response matches the expected status code before returning.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>call_description</strong> (<em>str</em>) – Text description of the call placed
+(e.g. “get schedule list”)</p></li>
+<li><p><strong>response</strong> (<em>requests.Response</em>) – the response object to validate.</p></li>
+<li><p><strong>target_status</strong> (<em>str</em><em>, </em><em>int</em>) – The expected HTTP response status reason or code.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>if the response status validation succeeds</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>requests.Response</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – if the response status validation fails</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.http_helpers.safe_json_from">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">safe_json_from</code><span class="sig-paren">(</span><em class="sig-param">response</em>, <em class="sig-param">description=''</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#safe_json_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.safe_json_from" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accept a response object and attempts to return the JSON-decoded data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>response</strong> (<em>requests.models.Response</em>) – a Response object from a requests call</p></li>
+<li><p><strong>description</strong> (<em>str</em><em>, </em><em>optional</em>) – details about the response expected.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The JSON-decoded data from the response</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>AssertionError</strong> – if the JSON data cannot be decoded properly.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.http_helpers.safe_request_validator">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">safe_request_validator</code><span class="sig-paren">(</span><em class="sig-param">inner_validator</em>, <em class="sig-param">max_failures=5</em>, <em class="sig-param">logger=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#safe_request_validator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.safe_request_validator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap a <code class="docutils literal notranslate"><span class="pre">check_request_until</span></code> validator in additional response checks.</p>
+<p>Will “fail fast” in the case of an <code class="docutils literal notranslate"><span class="pre">unauthorized</span></code> response,
+and will support retrying calls if a non-200-level reponse status is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inner_validator</strong> (<em>function</em>) – case-specific response validator function,
+should return False if condition is not met and re-checking should continue,
+or True if target status is complete and result should be returned.</p></li>
+<li><p><strong>max_failures</strong> (<em>int</em>) – total number of retries <em>per cycle</em> a call should be allowed
+before failing permanently and returning the last response</p></li>
+<li><p><strong>logger</strong> (<em>logging.logger</em><em>, </em><em>optional</em>) – a logger to handle debug messages from the
+validator</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>response-status-checking decorated version of <code class="docutils literal notranslate"><span class="pre">inner_validator</span></code></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.http_helpers.validate_response_status_code">
+<code class="sig-prename descclassname">jgt_common.http_helpers.</code><code class="sig-name descname">validate_response_status_code</code><span class="sig-paren">(</span><em class="sig-param">expected_status_description</em>, <em class="sig-param">response</em>, <em class="sig-param">err_prefix=''</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/http_helpers.html#validate_response_status_code"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.http_helpers.validate_response_status_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert that a response’s status code matches an expected status code.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>expected_status_description</strong> (<em>str</em><em>, </em><em>int</em>) – The expected HTTP response status reason
+or code.</p></li>
+<li><p><strong>response</strong> (<em>Response</em>) – The python requests library response to validate.</p></li>
+<li><p><strong>err_prefix</strong> (<em>str</em><em>, </em><em>optional</em>) – Prefix, if any, to the error message, when an
+assertion is raised.</p></li>
+<li><p><strong>kwargs</strong> – additional keyword args to be passed on to check_response_status_code.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>AssertionError</strong> – if the response status validation fails</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-jgt_common.tag_to_url">
+<span id="jgt-common-tag-to-url-module"></span><h2>jgt_common.tag_to_url module<a class="headerlink" href="#module-jgt_common.tag_to_url" title="Permalink to this headline">¶</a></h2>
+<p>Pre-defined tag-to-url patterns.</p>
+</div>
+<div class="section" id="module-jgt_common.uuid_replacer">
+<span id="jgt-common-uuid-replacer-module"></span><h2>jgt_common.uuid_replacer module<a class="headerlink" href="#module-jgt_common.uuid_replacer" title="Permalink to this headline">¶</a></h2>
+<p>Replace UUIDs helper.</p>
+<dl class="class">
+<dt id="jgt_common.uuid_replacer.UUIDLineReplacer">
+<em class="property">class </em><code class="sig-prename descclassname">jgt_common.uuid_replacer.</code><code class="sig-name descname">UUIDLineReplacer</code><span class="sig-paren">(</span><em class="sig-param">template=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/uuid_replacer.html#UUIDLineReplacer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.uuid_replacer.UUIDLineReplacer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Track and Replace UUIDs on a line-by-line basis.</p>
+<p>Instances should be called with a line to process
+and will return the substituted line.</p>
+<p>When you are all done, if you want, you can call <code class="docutils literal notranslate"><span class="pre">uuid_mappings</span></code>
+to get a list of the substitutions that were made.</p>
+<dl class="method">
+<dt id="jgt_common.uuid_replacer.UUIDLineReplacer.uuid_mappings">
+<code class="sig-name descname">uuid_mappings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/uuid_replacer.html#UUIDLineReplacer.uuid_mappings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.uuid_replacer.UUIDLineReplacer.uuid_mappings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of lines of all the substitutions done.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="data">
+<dt id="jgt_common.uuid_replacer.UUID_REPLACEMENT_TEMPLATE">
+<code class="sig-prename descclassname">jgt_common.uuid_replacer.</code><code class="sig-name descname">UUID_REPLACEMENT_TEMPLATE</code><em class="property"> = ',,UUID-{:03d},,'</em><a class="headerlink" href="#jgt_common.uuid_replacer.UUID_REPLACEMENT_TEMPLATE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Template used to generate shorter version for a UUID.</p>
+<p>Is expected to hold exaclty one numeric parameter substitution.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.uuid_replacer.main">
+<code class="sig-prename descclassname">jgt_common.uuid_replacer.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/uuid_replacer.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.uuid_replacer.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command-line interace for replacing UUIDs with placeholders.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="jgt_common.uuid_replacer.uuid_replace">
+<code class="sig-prename descclassname">jgt_common.uuid_replacer.</code><code class="sig-name descname">uuid_replace</code><span class="sig-paren">(</span><em class="sig-param">src</em>, <em class="sig-param">dest</em>, <em class="sig-param">template='</em>, <em class="sig-param">UUID-{:03d}</em>, <em class="sig-param">'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/jgt_common/uuid_replacer.html#uuid_replace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#jgt_common.uuid_replacer.uuid_replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace UUIDs in all the lines in <code class="docutils literal notranslate"><span class="pre">src</span></code> and write to <code class="docutils literal notranslate"><span class="pre">dest</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>src</strong> (<em>file</em>) – a file opened for read</p></li>
+<li><p><strong>dest</strong> (<em>file</em>) – a file opened for write.</p></li>
+</ul>
+</dd>
+</dl>
+<p>After processing the contents of <code class="docutils literal notranslate"><span class="pre">src</span></code> into <code class="docutils literal notranslate"><span class="pre">dest</span></code>, a glossary is then written
+to <code class="docutils literal notranslate"><span class="pre">dest.</span></code></p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="MAINTAINER.html" class="btn btn-neutral float-right" title="Maintainer’s Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="JGT Common Tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Doug Philips, Lewis Franklin, Ryan Casperson, Brad Brown, &amp; Shawn Dutton
+      
+        <span class="build">
+          Build
+          <a href="https://github.com///github.com/jolly-good-toolbelt/jgt_common/tree/e2b68fbc26344b4264ce3a977c7ba21c79a27434">e2b68fbc26344b4264ce3a977c7ba21c79a27434</a>.
+        </span>
+      
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
